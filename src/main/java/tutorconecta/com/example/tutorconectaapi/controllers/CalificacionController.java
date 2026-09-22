@@ -1,8 +1,8 @@
-package grupo2.com.example.tutorconectademo.controllers;
+package grupo2.com.example.tutorconectaapi.controllers;
 
-import grupo2.com.example.tutorconectademo.dtos.CalificacionRequestDTO;
-import grupo2.com.example.tutorconectademo.dtos.CalificacionResponseDTO;
-import grupo2.com.example.tutorconectademo.services.CalificacionService;
+import grupo2.com.example.tutorconectaapi.dtos.CalificacionRequestDTO;
+import grupo2.com.example.tutorconectaapi.dtos.CalificacionResponseDTO;
+import grupo2.com.example.tutorconectaapi.services.CalificacionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.EntityNotFoundException;

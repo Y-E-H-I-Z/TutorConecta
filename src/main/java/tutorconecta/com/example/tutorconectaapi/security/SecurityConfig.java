@@ -1,7 +1,7 @@
-package grupo2.com.example.tutorconectademo.security;
+package grupo2.com.example.tutorconectaapi.security;
 
-import grupo2.com.example.tutorconectademo.entities.Usuario;
-import grupo2.com.example.tutorconectademo.repositories.UsuarioRepository;
+import grupo2.com.example.tutorconectaapi.entities.Usuario;
+import grupo2.com.example.tutorconectaapi.repositories.UsuarioRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;

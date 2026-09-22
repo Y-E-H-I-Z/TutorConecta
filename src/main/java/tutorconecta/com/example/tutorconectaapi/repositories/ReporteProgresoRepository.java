@@ -1,6 +1,6 @@
-package grupo2.com.example.tutorconectademo.repositories;
+package grupo2.com.example.tutorconectaapi.repositories;
 
-import grupo2.com.example.tutorconectademo.entities.ReporteProgreso;
+import grupo2.com.example.tutorconectaapi.entities.ReporteProgreso;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

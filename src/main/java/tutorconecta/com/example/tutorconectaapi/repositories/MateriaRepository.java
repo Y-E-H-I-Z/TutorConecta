@@ -1,6 +1,6 @@
-package grupo2.com.example.tutorconectademo.repositories;
+package grupo2.com.example.tutorconectaapi.repositories;
 
-import grupo2.com.example.tutorconectademo.entities.Materia;
+import grupo2.com.example.tutorconectaapi.entities.Materia;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

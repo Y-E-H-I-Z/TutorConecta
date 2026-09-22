@@ -1,7 +1,7 @@
-package grupo2.com.example.tutorconectademo.services;
+package grupo2.com.example.tutorconectaapi.services;
 
-import grupo2.com.example.tutorconectademo.dtos.SesionRequestDTO;
-import grupo2.com.example.tutorconectademo.dtos.SesionResponseDTO;
+import grupo2.com.example.tutorconectaapi.dtos.SesionRequestDTO;
+import grupo2.com.example.tutorconectaapi.dtos.SesionResponseDTO;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package grupo2.com.example.tutorconectademo.security;
+package grupo2.com.example.tutorconectaapi.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
