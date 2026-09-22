@@ -1,4 +1,4 @@
-package grupo2.com.example.tutorconectaapi.entities;
+package tutorconecta.com.example.tutorconectaapi.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;

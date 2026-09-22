@@ -1,7 +1,7 @@
-package grupo2.com.example.tutorconectaapi.services;
+package tutorconecta.com.example.tutorconectaapi.services;
 
-import grupo2.com.example.tutorconectaapi.dtos.CalificacionRequestDTO;
-import grupo2.com.example.tutorconectaapi.dtos.CalificacionResponseDTO;
+import tutorconecta.com.example.tutorconectaapi.dtos.CalificacionRequestDTO;
+import tutorconecta.com.example.tutorconectaapi.dtos.CalificacionResponseDTO;
 
 import java.util.List;
 
