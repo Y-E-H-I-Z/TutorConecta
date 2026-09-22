@@ -1,8 +1,8 @@
-package grupo2.com.example.tutorconectademo.controllers;
+package grupo2.com.example.tutorconectaapi.controllers;
 
-import grupo2.com.example.tutorconectademo.dtos.DisponibilidadHorariaRequestDTO;
-import grupo2.com.example.tutorconectademo.dtos.DisponibilidadHorariaResponseDTO;
-import grupo2.com.example.tutorconectademo.services.DisponibilidadHorariaService;
+import grupo2.com.example.tutorconectaapi.dtos.DisponibilidadHorariaRequestDTO;
+import grupo2.com.example.tutorconectaapi.dtos.DisponibilidadHorariaResponseDTO;
+import grupo2.com.example.tutorconectaapi.services.DisponibilidadHorariaService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.EntityNotFoundException;

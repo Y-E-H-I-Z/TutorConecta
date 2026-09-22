@@ -1,4 +1,4 @@
-package grupo2.com.example.tutorconectademo.security;
+package grupo2.com.example.tutorconectaapi.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

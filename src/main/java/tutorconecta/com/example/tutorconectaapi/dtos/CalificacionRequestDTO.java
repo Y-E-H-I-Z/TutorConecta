@@ -1,4 +1,4 @@
-package grupo2.com.example.tutorconectademo.dtos;
+package grupo2.com.example.tutorconectaapi.dtos;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Min;
