@@ -1,8 +1,8 @@
-package grupo2.com.example.tutorconectaapi.controllers;
+package tutorconecta.com.example.tutorconectaapi.controllers;
 
-import grupo2.com.example.tutorconectaapi.dtos.ReporteProgresoRequestDTO;
-import grupo2.com.example.tutorconectaapi.dtos.ReporteProgresoResponseDTO;
-import grupo2.com.example.tutorconectaapi.services.ReporteProgresoService;
+import tutorconecta.com.example.tutorconectaapi.dtos.ReporteProgresoRequestDTO;
+import tutorconecta.com.example.tutorconectaapi.dtos.ReporteProgresoResponseDTO;
+import tutorconecta.com.example.tutorconectaapi.services.ReporteProgresoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.EntityNotFoundException;

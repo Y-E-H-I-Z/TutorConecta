@@ -1,4 +1,4 @@
-package grupo2.com.example.tutorconectaapi.dtos;
+package tutorconecta.com.example.tutorconectaapi.dtos;
 
 import lombok.Data;
 

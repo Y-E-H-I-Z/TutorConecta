@@ -1,8 +1,8 @@
-package grupo2.com.example.tutorconectaapi.controllers;
+package tutorconecta.com.example.tutorconectaapi.controllers;
 
-import grupo2.com.example.tutorconectaapi.dtos.UsuarioRequestDTO;
-import grupo2.com.example.tutorconectaapi.dtos.UsuarioResponseDTO;
-import grupo2.com.example.tutorconectaapi.services.UsuarioService;
+import tutorconecta.com.example.tutorconectaapi.dtos.UsuarioRequestDTO;
+import tutorconecta.com.example.tutorconectaapi.dtos.UsuarioResponseDTO;
+import tutorconecta.com.example.tutorconectaapi.services.UsuarioService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.security.access.prepost.PreAuthorize;
