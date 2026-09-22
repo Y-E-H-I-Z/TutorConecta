@@ -25,10 +25,10 @@ public class JwtUtil {
     public String generateToken(String username, List<String> authorities) {
         Date issuedAt = new Date();
         return Jwts.builder()
-                .subject(username)
+                .setSubject(username)
                 .claim("authorities", authorities)
-                .issuedAt(issuedAt)
-                .expiration(new Date(issuedAt.getTime() + expirationMs))
+                .setIssuedAt(issuedAt)
+                .setExpiration(new Date(issuedAt.getTime() + expirationMs))
                 .signWith(signingKey)
                 .compact();
     }
@@ -57,10 +57,10 @@ public class JwtUtil {
     }
 
     private Claims parseClaims(String token) {
-        return Jwts.parser()
-                .verifyWith(signingKey)
+        return Jwts.parserBuilder()
+                .setSigningKey(signingKey)
                 .build()
-                .parseSignedClaims(token)
-                .getPayload();
+                .parseClaimsJws(token)
+                .getBody();
     }
 }

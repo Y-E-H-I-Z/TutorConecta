@@ -15,7 +15,7 @@ public interface SesionService {
 
     SesionResponseDTO actualizar(Long id, SesionRequestDTO request);
 
-    SesionResponseDTO actualizarEstadoSesion(Long id, String nuevoEstado);
+    void updateEstadoSesion(Long id, String estado);
 
     void eliminar(Long id);
 }
