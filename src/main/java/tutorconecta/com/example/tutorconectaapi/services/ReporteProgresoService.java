@@ -1,7 +1,7 @@
-package tutorconecta.com.example.tutorconectaapi.services;
+package grupo2.com.example.tutorconectademo.services;
 
-import tutorconecta.com.example.tutorconectaapi.dtos.ReporteProgresoRequestDTO;
-import tutorconecta.com.example.tutorconectaapi.dtos.ReporteProgresoResponseDTO;
+import grupo2.com.example.tutorconectademo.dtos.ReporteProgresoRequestDTO;
+import grupo2.com.example.tutorconectademo.dtos.ReporteProgresoResponseDTO;
 
 import java.util.List;
 

@@ -1,10 +1,10 @@
-package tutorconecta.com.example.tutorconectaapi.services;
+package grupo2.com.example.tutorconectademo.services;
 
-import tutorconecta.com.example.tutorconectaapi.components.EntityMapper;
-import tutorconecta.com.example.tutorconectaapi.dtos.DisponibilidadHorariaRequestDTO;
-import tutorconecta.com.example.tutorconectaapi.dtos.DisponibilidadHorariaResponseDTO;
-import tutorconecta.com.example.tutorconectaapi.entities.DisponibilidadHoraria;
-import tutorconecta.com.example.tutorconectaapi.repositories.DisponibilidadHorariaRepository;
+import grupo2.com.example.tutorconectademo.components.EntityMapper;
+import grupo2.com.example.tutorconectademo.dtos.DisponibilidadHorariaRequestDTO;
+import grupo2.com.example.tutorconectademo.dtos.DisponibilidadHorariaResponseDTO;
+import grupo2.com.example.tutorconectademo.entities.DisponibilidadHoraria;
+import grupo2.com.example.tutorconectademo.repositories.DisponibilidadHorariaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 

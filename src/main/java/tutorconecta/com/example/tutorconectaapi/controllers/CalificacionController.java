@@ -1,14 +1,14 @@
-package tutorconecta.com.example.tutorconectaapi.controllers;
+package grupo2.com.example.tutorconectademo.controllers;
 
+import grupo2.com.example.tutorconectademo.dtos.CalificacionRequestDTO;
+import grupo2.com.example.tutorconectademo.dtos.CalificacionResponseDTO;
+import grupo2.com.example.tutorconectademo.services.CalificacionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tutorconecta.com.example.tutorconectaapi.dtos.CalificacionRequestDTO;
-import tutorconecta.com.example.tutorconectaapi.dtos.CalificacionResponseDTO;
-import tutorconecta.com.example.tutorconectaapi.services.CalificacionService;
 
 import java.net.URI;
 import java.util.List;

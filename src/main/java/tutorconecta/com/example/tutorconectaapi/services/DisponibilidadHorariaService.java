@@ -1,7 +1,7 @@
-package tutorconecta.com.example.tutorconectaapi.services;
+package grupo2.com.example.tutorconectademo.services;
 
-import tutorconecta.com.example.tutorconectaapi.dtos.DisponibilidadHorariaRequestDTO;
-import tutorconecta.com.example.tutorconectaapi.dtos.DisponibilidadHorariaResponseDTO;
+import grupo2.com.example.tutorconectademo.dtos.DisponibilidadHorariaRequestDTO;
+import grupo2.com.example.tutorconectademo.dtos.DisponibilidadHorariaResponseDTO;
 
 import java.util.List;
 
