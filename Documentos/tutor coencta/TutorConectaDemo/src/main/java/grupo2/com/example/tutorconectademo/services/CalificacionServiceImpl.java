@@ -1,0 +1,53 @@
+package grupo2.com.example.tutorconectademo.services;
+
+import grupo2.com.example.tutorconectademo.components.EntityMapper;
+import grupo2.com.example.tutorconectademo.dtos.CalificacionRequestDTO;
+import grupo2.com.example.tutorconectademo.dtos.CalificacionResponseDTO;
+import grupo2.com.example.tutorconectademo.entities.Calificacion;
+import grupo2.com.example.tutorconectademo.repositories.CalificacionRepository;
+import jakarta.persistence.EntityNotFoundException;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class CalificacionServiceImpl implements CalificacionService {
+    private final CalificacionRepository repository;
+    private final EntityMapper mapper;
+
+    public CalificacionServiceImpl(CalificacionRepository repository, EntityMapper mapper) {
+        this.repository = repository;
+        this.mapper = mapper;
+    }
+
+    @Override
+    public CalificacionResponseDTO crear(CalificacionRequestDTO request) {
+        return mapper.toCalificacionResponseDTO(repository.save(mapper.toCalificacionEntity(request)));
+    }
+
+    @Override
+    public List<CalificacionResponseDTO> listarTodos() {
+        return repository.findAll().stream().map(mapper::toCalificacionResponseDTO).toList();
+    }
+
+    @Override
+    public CalificacionResponseDTO buscarPorId(Long id) {
+        return repository.findById(id).map(mapper::toCalificacionResponseDTO)
+                .orElseThrow(() -> new EntityNotFoundException("No existe una calificacion con ID: " + id));
+    }
+
+    @Override
+    public CalificacionResponseDTO actualizar(Long id, CalificacionRequestDTO request) {
+        buscarPorId(id);
+        Calificacion calificacion = mapper.toCalificacionEntity(request);
+        calificacion.setIdCalificacion(id);
+        return mapper.toCalificacionResponseDTO(repository.save(calificacion));
+    }
+
+    @Override
+    public void eliminar(Long id) {
+        Calificacion calificacion = repository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("No existe una calificacion con ID: " + id));
+        repository.delete(calificacion);
+    }
+}
