@@ -1,12 +1,10 @@
-package tutorconecta.com.example.tutorconectaapi.services;
+package grupo2.com.example.tutorconectademo.services;
 
-import tutorconecta.com.example.tutorconectaapi.dtos.SesionRequestDTO;
-import tutorconecta.com.example.tutorconectaapi.dtos.SesionResponseDTO;
-import tutorconecta.com.example.tutorconectaapi.entities.Materia;
-import tutorconecta.com.example.tutorconectaapi.entities.Sesion;
-import tutorconecta.com.example.tutorconectaapi.repositories.MateriaRepository;
-import tutorconecta.com.example.tutorconectaapi.repositories.SesionRepository;
-
+import grupo2.com.example.tutorconectademo.components.EntityMapper;
+import grupo2.com.example.tutorconectademo.dtos.SesionRequestDTO;
+import grupo2.com.example.tutorconectademo.dtos.SesionResponseDTO;
+import grupo2.com.example.tutorconectademo.entities.Sesion;
+import grupo2.com.example.tutorconectademo.repositories.SesionRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 

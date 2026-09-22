@@ -1,8 +1,8 @@
-package tutorconecta.com.example.tutorconectaapi.dtos;
+package grupo2.com.example.tutorconectademo.dtos;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 import lombok.Data;
 
 import java.time.LocalDateTime;

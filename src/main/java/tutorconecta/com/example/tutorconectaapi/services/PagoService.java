@@ -1,8 +1,7 @@
-package tutorconecta.com.example.tutorconectaapi.services;
+package grupo2.com.example.tutorconectademo.services;
 
-
-import tutorconecta.com.example.tutorconectaapi.dtos.PagoRequestDTO;
-import tutorconecta.com.example.tutorconectaapi.dtos.PagoResponseDTO;
+import grupo2.com.example.tutorconectademo.dtos.PagoRequestDTO;
+import grupo2.com.example.tutorconectademo.dtos.PagoResponseDTO;
 
 import java.util.List;
 

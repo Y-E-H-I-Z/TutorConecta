@@ -1,6 +1,6 @@
-package tutorconecta.com.example.tutorconectaapi.repositories;
+package grupo2.com.example.tutorconectademo.repositories;
 
-import tutorconecta.com.example.tutorconectaapi.entities.DisponibilidadHoraria;
+import grupo2.com.example.tutorconectademo.entities.DisponibilidadHoraria;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

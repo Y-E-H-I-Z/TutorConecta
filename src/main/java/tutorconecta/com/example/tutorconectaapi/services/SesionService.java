@@ -1,6 +1,8 @@
-package tutorconecta.com.example.tutorconectaapi.services;
-import tutorconecta.com.example.tutorconectaapi.dtos.SesionRequestDTO;
-import tutorconecta.com.example.tutorconectaapi.dtos.SesionResponseDTO;
+package grupo2.com.example.tutorconectademo.services;
+
+import grupo2.com.example.tutorconectademo.dtos.SesionRequestDTO;
+import grupo2.com.example.tutorconectademo.dtos.SesionResponseDTO;
+
 import java.util.List;
 
 public interface SesionService {

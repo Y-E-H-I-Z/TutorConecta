@@ -1,9 +1,8 @@
-package tutorconecta.com.example.tutorconectaapi.controllers;
+package grupo2.com.example.tutorconectademo.controllers;
 
-import tutorconecta.com.example.tutorconectaapi.dtos.SesionRequestDTO;
-import tutorconecta.com.example.tutorconectaapi.dtos.SesionResponseDTO;
-import tutorconecta.com.example.tutorconectaapi.services.SesionService;
-
+import grupo2.com.example.tutorconectademo.dtos.SesionRequestDTO;
+import grupo2.com.example.tutorconectademo.dtos.SesionResponseDTO;
+import grupo2.com.example.tutorconectademo.services.SesionService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
+
 @RestController
 @RequestMapping("/api/sesiones")
 public class SesionController {
@@ -54,7 +54,8 @@ public class SesionController {
     public ResponseEntity<SesionResponseDTO> actualizarEstado(
             @PathVariable Long id, @RequestParam String estado) {
         try {
-            return ResponseEntity.ok(sesionService.actualizarEstadoSesion(id, estado));        } catch (EntityNotFoundException exception) {
+            return ResponseEntity.ok(sesionService.updateEstadoSesion(id, estado));
+        } catch (EntityNotFoundException exception) {
             return ResponseEntity.notFound().build();
         }
     }
