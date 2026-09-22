@@ -49,11 +49,11 @@ public class SesionServiceImpl implements SesionService {
     }
 
     @Override
-    public SesionResponseDTO actualizarEstadoSesion(Long id, String nuevoEstado) {
+    public void updateEstadoSesion(Long id, String estado) {
         Sesion sesion = sesionRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("No existe una sesion con ID: " + id));
-        sesion.setEstado(nuevoEstado);
-        return entityMapper.toSesionResponseDTO(sesionRepository.save(sesion));
+        sesion.setEstado(estado);
+        sesionRepository.save(sesion);
     }
 
     @Override
