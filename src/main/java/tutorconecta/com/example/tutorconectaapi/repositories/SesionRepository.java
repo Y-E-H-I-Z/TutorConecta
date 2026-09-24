@@ -1,6 +1,6 @@
 package tutorconecta.com.example.tutorconectaapi.repositories;
-import tutorconecta.com.example.tutorconectaapi.entities.Sesion;
 
+import tutorconecta.com.example.tutorconectaapi.entities.Sesion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

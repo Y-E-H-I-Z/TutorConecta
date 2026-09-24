@@ -1,6 +1,8 @@
 package tutorconecta.com.example.tutorconectaapi.services;
+
 import tutorconecta.com.example.tutorconectaapi.dtos.SesionRequestDTO;
 import tutorconecta.com.example.tutorconectaapi.dtos.SesionResponseDTO;
+
 import java.util.List;
 
 public interface SesionService {
@@ -13,7 +15,7 @@ public interface SesionService {
 
     SesionResponseDTO actualizar(Long id, SesionRequestDTO request);
 
-    SesionResponseDTO actualizarEstadoSesion(Long id, String nuevoEstado);
+    void updateEstadoSesion(Long id, String estado);
 
     void eliminar(Long id);
 }

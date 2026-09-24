@@ -1,12 +1,10 @@
 package tutorconecta.com.example.tutorconectaapi.services;
 
+import tutorconecta.com.example.tutorconectaapi.components.EntityMapper;
 import tutorconecta.com.example.tutorconectaapi.dtos.SesionRequestDTO;
 import tutorconecta.com.example.tutorconectaapi.dtos.SesionResponseDTO;
-import tutorconecta.com.example.tutorconectaapi.entities.Materia;
 import tutorconecta.com.example.tutorconectaapi.entities.Sesion;
-import tutorconecta.com.example.tutorconectaapi.repositories.MateriaRepository;
 import tutorconecta.com.example.tutorconectaapi.repositories.SesionRepository;
-
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -51,11 +49,11 @@ public class SesionServiceImpl implements SesionService {
     }
 
     @Override
-    public SesionResponseDTO actualizarEstadoSesion(Long id, String nuevoEstado) {
+    public void updateEstadoSesion(Long id, String estado) {
         Sesion sesion = sesionRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("No existe una sesion con ID: " + id));
-        sesion.setEstado(nuevoEstado);
-        return entityMapper.toSesionResponseDTO(sesionRepository.save(sesion));
+        sesion.setEstado(estado);
+        sesionRepository.save(sesion);
     }
 
     @Override
