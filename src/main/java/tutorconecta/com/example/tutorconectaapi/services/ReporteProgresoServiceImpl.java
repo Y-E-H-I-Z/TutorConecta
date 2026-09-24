@@ -50,4 +50,16 @@ public class ReporteProgresoServiceImpl implements ReporteProgresoService {
                 .orElseThrow(() -> new EntityNotFoundException("No existe un reporte con ID: " + id));
         repository.delete(reporte);
     }
+
+    @Override
+    public List<ReporteProgreso> findReportesByEstudianteId(Long idEstudiante) {
+        return repository.findReportesByEstudianteId(idEstudiante);
+    }
+
+    @Override
+    public List<ReporteProgreso> findReportesByTutorId(Long idTutor) {
+        return repository.findReportesByTutorId(idTutor);
+    }
+
+
 }
