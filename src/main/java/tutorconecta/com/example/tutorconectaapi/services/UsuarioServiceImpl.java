@@ -9,6 +9,7 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
@@ -54,6 +55,13 @@ public class UsuarioServiceImpl implements UsuarioService {
             throw new EntityNotFoundException("No existe un usuario con ID: " + id);
         }
         usuarioRepository.deleteById(id);
+    }
+
+    @Override
+    public List<UsuarioResponseDTO> buscarTutorPorNombre(String nombre) {
+        return usuarioRepository.findTutorByNombre(nombre).stream()
+                .map(entityMapper::toUsuarioResponseDTO)
+                .toList();
     }
 
 }

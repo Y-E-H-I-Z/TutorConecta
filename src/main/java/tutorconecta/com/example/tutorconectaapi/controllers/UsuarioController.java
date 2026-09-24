@@ -1,5 +1,6 @@
 package tutorconecta.com.example.tutorconectaapi.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
 import tutorconecta.com.example.tutorconectaapi.dtos.UsuarioRequestDTO;
 import tutorconecta.com.example.tutorconectaapi.dtos.UsuarioResponseDTO;
 import tutorconecta.com.example.tutorconectaapi.services.UsuarioService;
@@ -21,10 +22,14 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @GetMapping
-    @PreAuthorize("hasAnyRole('ADMIN', 'TUTOR')")
-    public ResponseEntity<List<UsuarioResponseDTO>> listarUsuarios() {
-        return ResponseEntity.ok(usuarioService.listarTodos());
+    @GetMapping("/tutores/buscar")
+    @Operation(summary = "Query con Filtro: Buscar tutores por nombre")
+    public ResponseEntity<List<UsuarioResponseDTO>> buscarTutoresPorNombre(@RequestParam String nombre) {
+        List<UsuarioResponseDTO> tutores = usuarioService.buscarTutorPorNombre(nombre);
+        if (tutores.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(tutores);
     }
 
     @PostMapping

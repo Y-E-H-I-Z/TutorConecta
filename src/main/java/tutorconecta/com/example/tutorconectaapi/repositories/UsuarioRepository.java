@@ -1,9 +1,9 @@
 package tutorconecta.com.example.tutorconectaapi.repositories;
 
-import tutorconecta.com.example.tutorconectaapi.entities.Usuario;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import tutorconecta.com.example.tutorconectaapi.entities.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
@@ -12,7 +12,11 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     // Encuentra un usuario por su email
     Usuario findByEmail(String email);
 
-    // Obtiene todos los usuarios que tienen un rol específico (ej. "Administrador" o "Tutor")
-    @Query("SELECT u FROM Usuario u JOIN u.rol r WHERE r.denominacion = :nombreRol")
-    List<Usuario> findUsuariosByRolName(@Param("nombreRol") String nombreRol);
+    @Query("""
+            SELECT u
+            FROM Usuario u
+            WHERE LOWER(u.rol) = 'tutor' 
+            AND LOWER(u.nombre) LIKE LOWER(CONCAT('%', :nombre, '%'))
+            """)
+    List<Usuario> findTutorByNombre(@Param("nombre") String nombre);
 }
