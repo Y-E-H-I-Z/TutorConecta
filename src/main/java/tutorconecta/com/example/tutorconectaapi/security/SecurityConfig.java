@@ -1,5 +1,7 @@
 package tutorconecta.com.example.tutorconectaapi.security;
 
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import tutorconecta.com.example.tutorconectaapi.entities.Usuario;
 import tutorconecta.com.example.tutorconectaapi.repositories.UsuarioRepository;
 import org.springframework.context.annotation.Bean;
@@ -67,5 +69,10 @@ public class SecurityConfig {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
+        return configuration.getAuthenticationManager();
     }
 }
