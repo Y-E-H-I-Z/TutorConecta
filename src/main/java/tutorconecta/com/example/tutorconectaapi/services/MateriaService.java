@@ -9,7 +9,11 @@ public interface MateriaService {
 
     MateriaResponseDTO crear(MateriaRequestDTO request);
 
-    List<MateriaResponseDTO> listarTodos();
+    List<MateriaResponseDTO> listarTodas();
+
+    default List<MateriaResponseDTO> listarTodos() {
+        return listarTodas();
+    }
 
     MateriaResponseDTO buscarPorId(Long id);
 

@@ -9,6 +9,7 @@ import lombok.Data;
 public class Materia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_materia")
     private Long idMateria;
 
     @Column(nullable = false, length = 100)
@@ -17,6 +18,6 @@ public class Materia {
     @Column(columnDefinition = "TEXT")
     private String descripcion;
 
-    @Column(nullable = false)
+    @Column(name = "nivel", nullable = false)
     private String nivelEducativo;
 }

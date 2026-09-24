@@ -26,7 +26,7 @@ public class MateriaServiceImpl implements MateriaService {
     }
 
     @Override
-    public List<MateriaResponseDTO> listarTodos() {
+    public List<MateriaResponseDTO> listarTodas() {
         return repository.findAll().stream().map(mapper::toMateriaResponseDTO).toList();
     }
 
