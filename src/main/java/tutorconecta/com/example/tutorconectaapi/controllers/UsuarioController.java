@@ -3,6 +3,7 @@ package tutorconecta.com.example.tutorconectaapi.controllers;
 import io.swagger.v3.oas.annotations.Operation;
 import tutorconecta.com.example.tutorconectaapi.dtos.UsuarioRequestDTO;
 import tutorconecta.com.example.tutorconectaapi.dtos.UsuarioResponseDTO;
+import tutorconecta.com.example.tutorconectaapi.repositories.UsuarioRepository;
 import tutorconecta.com.example.tutorconectaapi.services.UsuarioService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
@@ -17,9 +18,11 @@ import java.util.List;
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
     private final UsuarioService usuarioService;
+    private final UsuarioRepository usuarioRepository;
 
-    public UsuarioController(UsuarioService usuarioService) {
+    public UsuarioController(UsuarioService usuarioService, UsuarioRepository usuarioRepository) {
         this.usuarioService = usuarioService;
+        this.usuarioRepository = usuarioRepository;
     }
 
     @GetMapping("/tutores/buscar")
@@ -30,6 +33,12 @@ public class UsuarioController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(tutores);
+    }
+
+    @GetMapping("/reporte/por-rol")
+    @Operation(summary = "Query Nativa: Reporte de cantidad de usuarios por rol")
+    public ResponseEntity<List<Object[]>> reporteUsuariosPorRol() {
+        return ResponseEntity.ok(usuarioRepository.reporteUsuariosPorRol());
     }
 
     @PostMapping
